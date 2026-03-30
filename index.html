@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cloud Practitioner Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <header class="heading">
+            <h1>AWS Cloud Practitioner Quiz</h1>
+            <div id="timer">30:00</div>
+        </header>
+
+        <main class="content container">
+            <section class="left-panel">
+                <div id="questionContainer" class="question-container">
+                    <div class="empty-state">Select a topic to start the quiz</div>
+                </div>
+
+                <div class="navigation nav-buttons" id="navControls">
+                    <button type="button" class="btn prev" id="prevBtn">Previous</button>
+                    <button type="button" class="btn next" id="nextBtn">Next</button>
+                </div>
+
+                <button type="button" id="submitBtn">Submit Quiz</button>
+
+                <section id="result"></section>
+            </section>
+
+            <aside class="right-panel" id="topicPanel">
+                <div class="topic-container">
+                    <button type="button" class="topic-btn" data-topic="compute" onclick="loadTopic('compute')">Compute</button>
+                    <button type="button" class="topic-btn" data-topic="storage" onclick="loadTopic('storage')">Storage</button>
+                    <button type="button" class="topic-btn" data-topic="database" onclick="loadTopic('database')">Database</button>
+                    <button type="button" class="topic-btn" data-topic="networking" onclick="loadTopic('networking')">Networking</button>
+                    <button type="button" class="topic-btn" data-topic="security" onclick="loadTopic('security')">Security</button>
+                    <button type="button" class="topic-btn" data-topic="pricing" onclick="loadTopic('pricing')">Pricing</button>
+                    <button type="button" class="topic-btn" data-topic="monitoring" onclick="loadTopic('monitoring')">Monitoring</button>
+                </div>
+
+                <div id="questionGrid" class="question-grid" style="display: none;"></div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
